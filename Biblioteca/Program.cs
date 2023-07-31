@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<BibliotecaContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("BibliotecaContext") ?? throw new InvalidOperationException("Connection string 'BibliotecaContext' not found.")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("BibliotecaContext") ?? throw new InvalidOperationException("Connection string 'BibliotecaContext' not found.")));
 
 var app = builder.Build();
 

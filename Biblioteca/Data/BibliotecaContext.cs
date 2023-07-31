@@ -14,6 +14,8 @@ namespace Biblioteca.Data
         {
         }
 
-        public DbSet<Biblioteca.Models.Book> Book { get; set; } = default!;
+        public DbSet<Book> Book { get; set; } = default!;
+        public DbSet<Publisher> Publisher { get; set; } = default!;
+        public DbSet<Author> Author { get; set; } = default!;
     }
 }
